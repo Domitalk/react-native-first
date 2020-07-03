@@ -1,16 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// going to use some state 
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
+
+  // going to put this in <text></text>
+  const [ outputText, setOutputText ] = useState('Open up App.js to start working on your App');
+
   return (
+    // view is like div
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+
+      {/* text is text obvo  */}
+
+      <Text>{outputText}</Text>
+
+      {/* onPress is like onClick but for apps  */}
+      {/* remember arrow func to execute setstate */}
+      <Button title="Change Text" onPress={()=> setOutputText("The text changed!")}/> 
+
       <StatusBar style="auto" />
     </View>
   );
 }
 
+// not exactly CSS but similar 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
