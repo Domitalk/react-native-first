@@ -13,11 +13,13 @@ export default function App() {
     <View style={styles.container}>
 
       {/* text is text obvo  */}
-
+      {/* showing string is similar to react  */}
       <Text>{outputText}</Text>
 
       {/* onPress is like onClick but for apps  */}
       {/* remember arrow func to execute setstate */}
+      {/* a lot of logic is going to go into react native 
+      esp with all these if/ terinary conditions for renderings between ios/android  */}
       <Button title="Change Text" onPress={()=> setOutputText("The text changed!")}/> 
 
       <StatusBar style="auto" />
